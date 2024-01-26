@@ -81,8 +81,11 @@ fun testFunctionFailed (){
 // ******************************************************************************************************************
 
 fun validatedLicensePlate(plate: String): Boolean{
+    // Expresión regular que define el formato de una placa ecuatoriana
     val regexPlate = Regex("^[A-Z]{3}-\\d{4}\$")
 
+    // Esta función devuelve true si la cadena plate coincide completamente con el patrón definido por la expresión
+    // regular y false en caso contrario.
     if (regexPlate.matches(plate)){
         print("La placa de automóvil: " + plate + ", ES ecuatoriana --> ")
         return true
